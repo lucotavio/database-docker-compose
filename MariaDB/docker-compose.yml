@@ -1,4 +1,6 @@
-version: '3.4'
+version: '3.5'
+volumes:
+  data:
 services:
   db:
     image: mariadb:11.1.2
@@ -9,5 +11,7 @@ services:
       MYSQL_ROOT_PASSWORD: 789789
       MYSQL_USER: luciano
       MYSQL_PASSWORD: 789789
+    volumes:
+      - data:/var/lib/mariadb
     ports:
       - "3309:3306"
