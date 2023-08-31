@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  db:
+    image: mariadb:11.1.2
+    container_name: mariadb
+    restart: always
+    environment:
+      TZ: America/Sao_Paulo
+      MYSQL_ROOT_PASSWORD: 789789
+      MYSQL_USER: luciano
+      MYSQL_PASSWORD: 789789
+    ports:
+      - "3309:3306"
